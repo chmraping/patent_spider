@@ -1,0 +1,300 @@
+.hidden_my {
+    display: none;
+    font-size: medium;
+}
+
+body {
+    /* padding-top: 50px; */
+    color: rgb(16, 114, 205);
+}
+
+a {
+    color: #0069ca;
+    text-decoration: none
+}
+
+.starter-template {
+    padding: 10px 15px;
+    text-align: left;
+}
+
+.company-name {
+    padding-left: 91px;
+    font-size: 46px;
+    color: rgb(16, 114, 205);
+}
+
+.company-code {
+    /* padding-left: 70px; */
+}
+
+.company-intro {
+}
+
+.statistic-graph {
+    float: left;
+    margin-left: 1%;
+    height: auto;
+    width: 18%;
+    text-align: center;
+}
+
+.patent-info {
+    float: left;
+    height: 600px;
+    width: 100%;
+    margin: 49px 1%;
+}
+
+.quarter {
+    float: left;
+    height: 300px;
+    width: 15%;
+}
+
+.statistic {
+    width: 200px;
+    height: 160px;
+    margin: 0 auto;
+}
+
+.statistic-title {
+    /* margin: 19px auto; */
+    /* padding-bottom: 20px; */
+    line-height: 40px;
+}
+
+.day-tab {
+    float: left;
+    height: 35px;
+    position: relative;
+    width: 603px;
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+}
+
+.g-ico {
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    background-image: url(http://simg4.qunarzz.com/train/common/ico04.png);
+    background-repeat: no-repeat;
+    line-height: 10;
+    vertical-align: middle
+}
+
+.g-ico-s {
+    width: 16px;
+    height: 16px
+}
+
+.day-tab li {
+    float: left;
+    width: 87px;
+    margin-left: -1px
+}
+
+.g-tab {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    zoom: 1;
+    padding: 0 0 0 1px;
+    vertical-align: top;
+    margin: 20px;
+}
+
+.g-tab:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden
+}
+
+.g-tab a {
+    display: inline;
+    float: left;
+    width: auto;
+    height: 33px;
+    margin: 0 0 0 -1px;
+    padding: 0 15px;
+    border: 1px solid #bde6e5;
+    border-bottom: 1px solid #20abae;
+    background-color: #f7fdfb;
+    font-size: 12px;
+    line-height: 33px;
+    color: #0069ca;
+    text-align: center;
+    cursor: pointer
+}
+
+.g-tab a:hover {
+    background-color: #fff;
+    color: #333;
+    text-decoration: none
+}
+
+.g-tab a.on, .g-tab a .on:hover {
+    border-color: #20abae;
+    background-color: #fff;
+    color: #333
+}
+
+.g-tab a.on {
+    position: relative;
+    border-bottom-color: #fff;
+    z-index: 1
+}
+
+.g-tab .day-tab {
+    float: left;
+    height: 35px;
+    position: relative;
+    width: 603px;
+    overflow: hidden
+}
+
+.g-tab .day-tab ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 1px;
+    _padding-left: 2px
+}
+
+.day-tab li {
+    float: left;
+    width: 87px;
+    margin-left: -1px
+}
+
+.g-tab .day-tab li a {
+    margin: 0;
+    width: 85px;
+    padding: 0
+}
+
+.g-tab .next, .g-tab .prev {
+    width: 33px;
+    border-left: 0;
+    border-right: 0;
+    vertical-align: middle;
+    padding: 0
+}
+
+.g-tab .next .g-ico, .g-tab .prev .g-ico {
+    position: relative;
+    z-index: 1;
+    *top: 9px
+}
+
+.g-tab .dis-gray {
+    background-color: #fafafa
+}
+
+.g-tab .dis-gray .g-ico-arrowleft {
+    background-position: -261px -23px
+}
+
+.g-tab .dis-gray .g-ico-arrowright {
+    background-position: -275px -23px
+}
+
+.g-ico-arrowleft {
+    background-position: -227px -23px
+}
+
+.g-ico-arrowright {
+    background-position: -243px -23px
+}
+
+.patent-detail {
+    width: 100%;
+    height: 100px;
+}
+#log_body {
+    overflow: scroll;
+    height: 500px;
+    width: auto;
+}
+.item {
+    margin-top: 10px;
+    border-bottom: 1px solid;
+    font-size: 18px;
+}
+
+.flyover .alert {
+    left: 50%;
+    top: 50%;
+    position: fixed;
+    z-index: 1050;
+}
+
+.flyover .mask {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background: black;
+    z-index: 1049;
+}
+
+code {
+    margin: 2em;
+    padding: 0.5em;
+    display: block;
+    background-color: #008fd5;
+    color: white;
+    opacity: 0.6;
+}
+
+.fa-spin {
+    -webkit-animation: fa-spin 2s infinite linear;
+    -moz-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+}
+
+@-webkit-keyframes fa-spin {
+
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@-moz-keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+ }
+
+@keyframes fa-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+.form-control{
+    margin-bottom: 10px;
+}

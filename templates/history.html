@@ -1,0 +1,92 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html ng-app="ui.bootstrap.demo">
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="#">
+    <link href="{% static "css/chosen.css" %}" rel="stylesheet">
+    <script src="{% static "js/jquery.min.js" %}"></script>
+    <script src="{% static "bower_components/angular/angular.min.js" %} "></script>
+    <script src="{% static "js/ui-bootstrap-tpls-0.12.1.js" %}"></script>
+    <script src="{% static "bower_components/angular-http-loader/app/package/js/angular-http-loader.min.js" %}"></script>
+    <script src="{% static "js/mainView.js" %}"></script>
+    {#    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">#}
+    <link href="{% static "css/mainView.css" %}" rel="stylesheet">
+    <title>专利结果展示</title>
+    <style>
+
+    </style>
+</head>
+<body>
+{% include 'nav.html' %}
+
+{% verbatim %}
+
+<div ng-controller="HistoryController">
+
+    <div class="container">
+        <div align="center">
+            <h1 style="font-size: 46px;color: rgb(16, 114, 205);">历史记录</h1>
+        </div>
+
+        <div class="content">
+
+            <div class="history-info">
+
+                <div class="col-lg-12">
+
+
+                    <table  class="table table-hover">
+
+                           <thead>
+                              <tr>
+                                 <th>开始时间</th>
+                                 <th>结束时间</th>
+                                 <th>执行时间</th>
+                                 <th>开始日期</th>
+                                 <th>截止日期</th>
+                                 <th>表达式起始ID</th>
+                                 <th>表达式截止ID</th>
+                                 <th>状态</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr ng-repeat="history in histories">
+                                 <td>{{ history.start_time }}</td>
+                                 <td>{{ history.end_time }}</td>
+                                 <td>{{ history.work_time }}</td>
+                                  <td>{{ history.start_day }}</td>
+                                  <td>{{ history.end_day }}</td>
+                                  <td>{{ history.start_id }}</td>
+                                  <td>{{ history.end_id }}</td>
+                                  <td>{{ history.state }}</td>
+                              </tr>
+                          </tbody>
+                </table>
+                </div>
+                <div style="text-align: center" class="col-lg-6 col-lg-offset-3">
+                    <pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize"
+                                class="pagination-sm" boundary-links="true" rotate="false"
+                                num-pages="numPages" ng-change="historyPageChanged()"></pagination>
+                </div>
+
+            </idv>
+
+            <div class="quarter" style="display: none;"></div>
+        </div>
+
+
+    </div>
+    <!-- /.container -->
+
+
+</div>
+{% endverbatim %}
+</body>
+
+</html>

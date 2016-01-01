@@ -1,0 +1,108 @@
+{% load staticfiles %}
+
+{% include 'bootstrap.html' %}
+<nav class="navbar navbar-default navbar-static-top " role="navigation">
+    <div class="container">
+        <ul class="nav nav-pills">
+            <li role="presentation"><a href="/manager">表达式管理</a></li>
+            <li role="presentation"><a href="/index">信息查询</a></li>
+            <li role="presentation"><a href="##" id="set_btn" data-toggle="modal" data-target="#myModal">设置监控</a></li>
+            <li role="presentation"><a href="##" id="manual_btn" data-toggle="modal" data-target="#s_Modal">手动抓取</a></li>
+            <li role="presentation"><a href="##" id="reset_btn">重置状态</a></li>
+            <li role="presentation"><a href="##" id="log_btn" data-toggle="modal" data-target="#logModal">查看日志</a></li>
+            <li role="presentation"><a href="/history">历史记录</a></li>
+            <li role="presentation" style="float: right;"><a href="##" id="logout_btn" data-toggle="modal" data-target="#logoutModal">退出登陆</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+{#<!-- Button trigger modal -->#}
+{#<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">#}
+{#  Launch demo modal#}
+{#</button>#}
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">设置监控</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" id="input_delay" placeholder="抓取时间间隔:单位（秒）"
+                       aria-describedby="basic-addon1">
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="close_btn" class="btn btn-default">关闭</button>
+                <button type="button" id="save_btn" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="s_Modal" tabindex="-1" role="dialog" aria-labelledby="s_ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="s_ModalLabel">设置参数</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" id="start_day" placeholder="起始日期 如：20100401"
+                       aria-describedby="basic-addon1">
+                 <input type="text" class="form-control" id="end_day" placeholder="终止日期 如：20140401"
+                       aria-describedby="basic-addon1">
+                 <input type="text" class="form-control" id="start_id" placeholder="起始ID 如：12"
+                       aria-describedby="basic-addon1">
+                 <input type="text" class="form-control" id="end_id" placeholder="终止ID 如：120"
+                       aria-describedby="basic-addon1">
+            </div>
+            <div class="modal-footer">
+
+                <button type="button" id="start_btn" class="btn btn-primary">确定</button>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="logoutModal" tabindex="-2" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">退出登陆</h4>
+            </div>
+            <div class="modal-body">
+                <p>您确定要退出登陆</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="save_logout_btn" class="btn btn-primary">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="logModal" tabindex="-1" role="dialog" aria-labelledby="logModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="logModalLabel">日志纪录</h4>
+            </div>
+            <div id="log_body" class="modal-body">
+               <p>日志体</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="refresh_btn" class="btn btn-primary">刷新</button>
+            </div>
+        </div>
+    </div>
+</div>

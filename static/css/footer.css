@@ -1,0 +1,10 @@
+.footer{
+    height: 80px;
+    background-color: #e7e7e7;
+    opacity: 0.9;
+}
+.wrap{
+    text-align: center;
+    padding-top: 30px;
+    color: #337AB7;
+}

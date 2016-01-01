@@ -1,0 +1,90 @@
+{% load staticfiles %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <!--jQuery dependencies-->
+    <link rel="stylesheet" href="{% static 'bower_components/jquery-ui/themes/base/jquery-ui.min.css' %}">
+    <script src="{% static 'js/jquery.min.1.8.1.js' %}"></script>
+
+    <!--PQ Grid files-->
+    <link rel="stylesheet" href="{% static 'css/pqgrid.min.css' %}"/>
+    <!--PQ Grid Office theme-->
+    <link rel="stylesheet" href="{% static 'css/pqgrid.css' %}"/>
+    <style type="text/css">
+        .ui-dialog * {
+            font-family: Tahoma;
+            font-size: 11px;
+        }
+
+        .ui-dialog form#crud-form {
+            margin-top: 20px;
+        }
+
+        .ui-dialog form#crud-form input {
+            width: 230px;
+            overflow: visible;
+            /*fix for IE*/
+        }
+
+        .ui-dialog form#crud-form td.label {
+            font-weight: bold;
+            padding-right: 5px;
+        }
+
+        div.pq-grid-toolbar-crud {
+            text-align: center;
+        }
+        .ui-dialog * {
+            font-family: Tahoma;
+            font-size: 11px;
+        }
+
+        .ui-dialog form#crud-form {
+            margin-top: 20px;
+        }
+
+        .ui-dialog form#crud-form input {
+            width: 230px;
+            overflow: visible; /*fix for IE*/
+        }
+
+        .ui-dialog form#crud-form td.label {
+            font-weight: bold;
+            padding-right: 5px;
+        }
+
+        div.pq-grid-toolbar-crud {
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+{% include "nav.html" %}
+<div id="popup-dialog-crud" style="display:none;">
+    <form id="crud-form">
+        <table align="center">
+            <tr>
+                <td class="label">表达式名称</td>
+                <td>
+                    <input type=text name="name"/>
+                </td>
+            </tr>
+            <tr>
+                <td class="label">表达式内容</td>
+                <td>
+                    <textarea rows="10" cols="35"></textarea>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+<div id="grid_array" style="margin:10px auto"></div>
+<script src="{% static 'js/jquery-ui.min.js' %}"></script>
+<script src="{% static 'js/pqgrid.min.js' %}"></script>
+
+{% include "footer.html" %}
+<script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
